@@ -1,0 +1,1169 @@
+@charset "UTF-8";
+
+:root{
+    --color-black: #1b1b1b;
+    --color-white: #fff;
+    --color-green: #00c9c9;
+    --color-rojo: #e30613;
+    --color-amarillo: #ffce00;
+    --color-blackOne: #1c1c1c;
+    --color-blue: #84dcf4;
+    --color-red: #fc2454;
+    --color-yellow: #fca404;
+    --color-yellowTwo: #e4ec8c;
+    --color-blueTwo: #049DD9;
+    --color-face: #3b5998;
+    --color-instagram: #8134af;
+    --color-naranjamedio: #f4a020;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+header{
+    width: 100%;
+    clear: both;
+    content: '';
+    display: table;
+    z-index: 999;
+    position: sticky;
+    top: 0% ;
+}
+
+.contenedor{
+    width: 100%;
+    max-width: 100%;
+    background-color: gainsboro;
+    display: grid;
+    grid-gap: 0px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(14, auto);
+
+    grid-template-areas: "header header header"
+                         "cajalogo cajalogo cajalogo"
+                         "title1 title1 title1"
+                         "producto1 producto2 producto3"
+                         "titleMedica titleMedica titleMedica"
+                         "producto4 producto5 producto6"
+                         "producto7 producto8 producto9"
+                         "title2 title2 title2"
+                         /* "banner banner banner" */
+                         "servicio1 servicio1 servicio2"
+                         "servicio3 servicio4 servicio4"
+                         "title3 title3 title3"
+                         "clientes1 clientes2 clientes3"
+                         "clientes4 clientes5 clientes6"
+                         "clientes7 clientes8 clientes9"
+                         "clientes10 clientes11 clientes12"
+                         "title4 title5 title5"
+                         "contacto1 contacto2 contacto2"
+                         "footer footer footer";
+}
+
+.contenedor > div,
+.contenedor .header,
+.contenedor .footer {
+    background-color: #e4ec8c;
+    padding: 0px;
+}
+
+.contenedor .header{
+    background: #2e3192; background: -moz-linear-gradient(to right,  #2e3192 1%,#1bffff 100%); background: -webkit-linear-gradient(to right,  #2e3192 1%,#1bffff 100%); background: linear-gradient(to right,  #2e3192 1%,#1bffff 100%);;
+    color: var(--color-white);
+    grid-area: header;
+}
+
+.header{
+    height: 10vh;
+}
+
+.header img{
+    width: 10%;
+    margin-top: 22px;
+    margin-left: 30px;
+}
+
+.navbar{
+    width: 100%;
+    padding: 30px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    float: right;
+}
+
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: var(--color-white);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: bolder;
+    font-size: 1.3rem;
+}
+
+.navbar ul li::before{
+    content: "";
+    height: 3px;
+    width: 0%;
+    background: var(--color-white);
+    position: absolute;
+    left: 0;
+    bottom: -12px;
+    transition: 0.4s ease-out;
+}
+
+.navbar ul li:hover:before{
+    width: 100%;
+}
+
+.contenedor .cajalogo{
+    width: 100%;
+    height: 200px;
+    background-color: white;
+    grid-area: cajalogo;
+}
+
+.redes{
+    margin-top: 0;
+    margin-bottom: 0;
+    display: flex;
+    width: 50%;
+}
+
+.redes ul{
+    list-style: none;
+    display: flex;
+    padding: 15px;
+}
+
+.redes p{
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: bolder;
+    letter-spacing: 1.5px;
+}
+
+.redes ul li a{
+    padding: 10px;
+    color: var(--color-blackOne);
+}
+
+.redes ul li:hover{
+    transform: scale(1.1) translate(0, -1.5px);
+    transition: .3s;
+}
+
+a{
+    color:var(--color-black);
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+.cajalogo img{
+    text-align: center;
+    margin-left: 35%;
+    width: 30%;
+    height: 55%;
+    margin-top: 40px;
+}
+
+
+.contenedor .banner{
+    background-color: var(--color-red);
+    color: var(--color-white);
+    height: 530px;
+    grid-area: banner;
+}
+
+.banner{
+    width: 100%;
+    height: 85vh;
+    margin: auto;
+    background-size: 100% 100%;
+    animation: banner 16s infinite;
+}
+
+@keyframes banner{
+    0%, 20%{
+        background-image: url(/img/banner1.png);
+    }
+    25%, 40%{
+        background-image: url(/img/banner2.jpg);
+    }
+    45%, 65%{
+        background-image: url(/img/banner3.jpeg);
+    }
+    70%, 100%{
+        background-image: url(/img/banner4.jpg);
+    }
+}
+
+.contenedor .title1{
+    background-color: gainsboro;
+    height: 160px;
+    grid-area: title1;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.title1{
+    text-shadow: 0.05em 0.05em 0.1em rgb(77, 76, 76);
+    font-size: 2rem;
+    font-family: 'Barlow Condensed', sans-serif;
+    color: var(--color-blackOne);
+    background-color: gainsboro;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.contenedor .producto1{
+    background-color: var(--color-naranjamedio);
+    color: var(--color-white);
+    height: 350px;
+    text-align: center;
+    border-radius: 4px;
+    margin: 20px 25px;
+    font-family: 'Barlow Condensed', sans-serif;
+    grid-area: producto1;
+}
+
+.producto1 img{
+    width: 100%;
+    height: 290px;
+    cursor: pointer;
+}
+
+.producto1 img:hover{
+    box-shadow: 0 0 10px var(--color-white), 0 0 20px var(--color-white), 0 0 40px var(--color-white);
+}
+
+.producto1 h2{
+    text-shadow: 0.05em 0.05em 0.1em rgb(77, 76, 76);
+    margin-top: 10px;
+    font-size: 1.5rem;
+}
+
+
+.contenedor .producto2{
+    background-color: var(--color-naranjamedio);
+    color: var(--color-white);
+    height: 350px;
+    text-align: center;
+    border-radius: 4px;
+    margin: 20px 25px;
+    font-family: 'Barlow Condensed', sans-serif;
+    grid-area: producto2;
+}
+
+.producto2 img{
+    width: 100%;
+    height: 290px;
+    cursor: pointer;
+}
+
+.producto2 img:hover{
+    box-shadow: 0 0 10px var(--color-white), 0 0 20px var(--color-white), 0 0 40px var(--color-white);
+}
+
+.producto2 h2{
+    text-shadow: 0.05em 0.05em 0.1em rgb(77, 76, 76);
+    margin-top: 10px;
+    font-size: 1.5rem;
+}
+
+.contenedor .producto3{
+    background-color: var(--color-naranjamedio);
+    color: var(--color-white);
+    height: 350px;
+    text-align: center;
+    border-radius: 4px;
+    margin: 20px 25px;
+    font-family: 'Barlow Condensed', sans-serif;
+    grid-area: producto3;
+}
+
+.producto3 img{
+    width: 100%;
+    height: 290px;
+    cursor: pointer;
+}
+
+.producto3 img:hover{
+    box-shadow: 0 0 10px var(--color-white), 0 0 20px var(--color-white), 0 0 40px var(--color-white);
+}
+
+.producto3 h2{
+    text-shadow: 0.05em 0.05em 0.1em rgb(77, 76, 76);
+    margin-top: 10px;
+    font-size: 1.5rem;
+}
+
+.contenedor .titleMedica{
+    background-color: gainsboro;
+    height: 160px;
+    grid-area: titleMedica;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.titleMedica{
+    text-shadow: 0.05em 0.05em 0.1em rgb(77, 76, 76);
+    font-size: 2rem;
+    font-family: 'Barlow Condensed', sans-serif;
+    color: var(--color-blackOne);
+    background-color: gainsboro;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.contenedor .producto4{
+    background-color: var(--color-green);
+    color: var(--color-white);
+    height: 350px;
+    text-align: center;
+    border-radius: 4px;
+    margin: 20px 25px;
+    font-family: 'Barlow Condensed', sans-serif;
+    grid-area: producto4;
+}
+
+.producto4 img{
+    width: 100%;
+    height: 290px;
+    cursor: pointer;
+}
+
+.producto4 img:hover{
+    box-shadow: 0 0 10px var(--color-white), 0 0 20px var(--color-white), 0 0 40px var(--color-white);
+}
+
+.producto4 h2{
+    text-shadow: 0.05em 0.05em 0.1em rgb(77, 76, 76);
+    margin-top: 10px;
+    font-size: 1.5rem;
+}
+
+.contenedor .producto5{
+    background-color: var(--color-green);
+    color: var(--color-white);
+    height: 350px;
+    text-align: center;
+    border-radius: 4px;
+    margin: 20px 25px;
+    font-family: 'Barlow Condensed', sans-serif;
+    grid-area: producto5;
+}
+
+.producto5 img{
+    width: 100%;
+    height: 290px;
+    cursor: pointer;
+}
+
+.producto5 img:hover{
+    box-shadow: 0 0 10px var(--color-white), 0 0 20px var(--color-white), 0 0 40px var(--color-white);
+}
+
+.producto5 h2{
+    text-shadow: 0.05em 0.05em 0.1em rgb(77, 76, 76);
+    margin-top: 10px;
+    font-size: 1.5rem;
+}
+
+.contenedor .producto6{
+    background-color: var(--color-green);
+    color: var(--color-white);
+    height: 350px;
+    text-align: center;
+    border-radius: 4px;
+    margin: 20px 25px;
+    font-family: 'Barlow Condensed', sans-serif;
+    grid-area: producto6;
+}
+
+.producto6 img{
+    width: 100%;
+    height: 290px;
+    cursor: pointer;
+}
+
+.producto6 img:hover{
+    box-shadow: 0 0 10px var(--color-white), 0 0 20px var(--color-white), 0 0 40px var(--color-white);
+}
+
+.producto6 h2{
+    text-shadow: 0.05em 0.05em 0.1em rgb(77, 76, 76);
+    margin-top: 10px;
+    font-size: 1.5rem;
+}
+
+.contenedor .producto7{
+    background-color: var(--color-green);
+    color: var(--color-white);
+    height: 350px;
+    text-align: center;
+    border-radius: 4px;
+    margin: 20px 25px;
+    font-family: 'Barlow Condensed', sans-serif;
+    grid-area: producto7;
+}
+
+.producto7 img{
+    width: 100%;
+    height: 290px;
+    cursor: pointer;
+}
+
+.producto7 img:hover{
+    box-shadow: 0 0 10px var(--color-white), 0 0 20px var(--color-white), 0 0 40px var(--color-white);
+}
+
+.producto7 h2{
+    text-shadow: 0.05em 0.05em 0.1em rgb(77, 76, 76);
+    margin-top: 10px;
+    font-size: 1.5rem;
+}
+
+.contenedor .producto8{
+    background-color: var(--color-green);
+    color: var(--color-white);
+    height: 350px;
+    text-align: center;
+    border-radius: 4px;
+    margin: 20px 25px;
+    font-family: 'Barlow Condensed', sans-serif;
+    grid-area: producto8;
+}
+
+.producto8 img{
+    width: 100%;
+    height: 290px;
+    cursor: pointer;
+}
+
+.producto8 img:hover{
+    box-shadow: 0 0 10px var(--color-white), 0 0 20px var(--color-white), 0 0 40px var(--color-white);
+}
+
+.producto8 h2{
+    text-shadow: 0.05em 0.05em 0.1em rgb(77, 76, 76);
+    margin-top: 10px;
+    font-size: 1.5rem;
+}
+
+.contenedor .producto9{
+    background-color: var(--color-green);
+    color: var(--color-white);
+    height: 350px;
+    text-align: center;
+    border-radius: 4px;
+    margin: 20px 25px;
+    font-family: 'Barlow Condensed', sans-serif;
+    grid-area: producto9;
+}
+
+.producto9 img{
+    width: 100%;
+    height: 290px;
+    cursor: pointer;
+}
+
+.producto9 img:hover{
+    box-shadow: 0 0 10px var(--color-white), 0 0 20px var(--color-white), 0 0 40px var(--color-white);
+}
+
+.producto9 h2{
+    text-shadow: 0.05em 0.05em 0.1em rgb(77, 76, 76);
+    margin-top: 10px;
+    font-size: 1.5rem;
+}
+
+
+
+.contenedor .title2{
+    background-color: gainsboro;
+    height: 160px;
+    grid-area: title2;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.title2{
+    text-shadow: 0.05em 0.05em 0.1em rgb(77, 76, 76);
+    font-size: 2rem;
+    font-family: 'Barlow Condensed', sans-serif;
+    color: var(--color-blackOne);
+    background-color: gainsboro;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.contenedor .servicios1{
+    background-image: url(./img/fondo2.png);
+    height: 550px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    grid-area: servicio1;
+}
+
+.servicios1 video{
+    width: 90%;
+    height: 70%;
+    margin: 70px 30px;
+}
+
+.contenedor .servicios2{
+    background-color: var(--color-naranjamedio);
+    color: var(--color-white);
+    height: 550px;
+    grid-area: servicio2;
+}
+
+.servicios2 .ul-service{
+    margin-left: 60px;
+    margin-top: 35px;
+    color: var(--color-white);
+}
+
+.servicios2 h2{
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+.serviceli{
+    margin-top: 25px;
+    text-align: left;
+    font-size: 1.2rem;
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+.contenedor .servicios3{
+    background-color: var(--color-green);
+    color: var(--color-white);
+    height: 450px;
+    margin-top: 100px;
+    grid-area: servicio3;
+}
+
+.servicios3 .ul-service{
+    margin-left: 60px;
+    margin-top: 35px;
+    color: var(--color-white);
+}
+
+.servicios3{
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+.serviceli{
+    margin-top: 25px;
+    text-align: left;
+    font-size: 1.2rem;
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+.contenedor .servicios4{
+    background-image: url(./img/fortos-medica/fondoclinica.webp);
+    height: 450px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin-top: 100px;
+    grid-area: servicio4;
+}
+
+.servicios4 video{
+    width: 90%;
+    height: 70%;
+    margin: 70px 40px;
+}
+
+.contenedor .title3{
+    background-color: gainsboro;
+    height: 160px;
+    grid-area: title3;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.title3{
+    text-shadow: 0.05em 0.05em 0.1em rgb(77, 76, 76);
+    font-size: 2rem;
+    font-family: 'Barlow Condensed', sans-serif;
+    color: var(--color-blackOne);
+    background-color: gainsboro;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.contenedor .clientes1{
+    background-color: gainsboro;
+    height: 100px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 30px;
+    grid-area: clientes1;
+}
+
+.contenedor .clientes1 img{
+    width: 50%;
+    height: 50%;
+    border-radius: 4px;
+}
+
+.contenedor .clientes2{
+    background-color: gainsboro;
+    height: 100px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 30px;
+    grid-area: clientes2;
+}
+
+.contenedor .clientes2 img{
+    width: 50%;
+    height: 50%;
+    border-radius: 4px;
+}
+
+.contenedor .clientes3{
+    background-color: gainsboro;
+    height: 100px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 30px;
+    grid-area: clientes3;
+}
+
+.contenedor .clientes3 img{
+    width: 50%;
+    height: 50%;
+    border-radius: 4px;
+}
+
+
+.contenedor .clientes4{
+    background-color: gainsboro;
+    height: 100px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 30px;
+    grid-area: clientes4;
+}
+
+.contenedor .clientes4 img{
+    width: 50%;
+    height: 50%;
+    border-radius: 4px;
+}
+
+.contenedor .clientes5{
+    background-color: gainsboro;
+    height: 100px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 30px;
+    grid-area: clientes5;
+}
+
+.contenedor .clientes5 img{
+    width: 50%;
+    height: 50%;
+    border-radius: 4px;
+}
+
+.contenedor .clientes6{
+    background-color: gainsboro;
+    height: 100px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 30px;
+    grid-area: clientes6;
+}
+
+.contenedor .clientes6 img{
+    width: 50%;
+    height: 50%;
+    border-radius: 4px;
+}
+
+
+.contenedor .clientes7{
+    background-color: gainsboro;
+    height: 100px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 30px;
+    grid-area: clientes7;
+}
+
+.contenedor .clientes7 img{
+    width: 50%;
+    height: 50%;
+    border-radius: 4px;
+}
+
+.contenedor .clientes8{
+    background-color: gainsboro;
+    height: 100px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 30px;
+    grid-area: clientes8;
+}
+
+.contenedor .clientes8 img{
+    width: 50%;
+    height: 50%;
+    border-radius: 4px;
+}
+
+.contenedor .clientes9{
+    background-color: gainsboro;
+    height: 100px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 30px;
+    grid-area: clientes9;
+}
+
+.contenedor .clientes9 img{
+    width: 50%;
+    height: 50%;
+    border-radius: 4px;
+}
+
+
+.contenedor .clientes10{
+    background-color: gainsboro;
+    height: 100px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 30px;
+    grid-area: clientes10;
+}
+
+.contenedor .clientes10 img{
+    width: 50%;
+    height: 50%;
+    border-radius: 4px;
+}
+
+.contenedor .clientes11{
+    background-color: gainsboro;
+    height: 100px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 30px;
+    grid-area: clientes11;
+}
+
+.contenedor .clientes11 img{
+    width: 50%;
+    height: 50%;
+    border-radius: 4px;
+}
+
+.contenedor .clientes12{
+    background-color: gainsboro;
+    height: 100px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 30px;
+    grid-area: clientes12;
+}
+
+.contenedor .clientes12 img{
+    width: 50%;
+    height: 50%;
+    border-radius: 4px;
+}
+
+
+.contenedor .title4{
+    background-color: var(--color-blackOne);
+    height: 160px;
+    margin-top: 0px;
+    grid-area: title4;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.title4{
+    text-shadow: 0.05em 0.05em 0.1em rgb(77, 76, 76);
+    font-size: 1.2rem;
+    font-family: 'Barlow Condensed', sans-serif;
+    color: var(--color-white);
+    background-color: gainsboro;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.contenedor .contacto1{
+    background-color: var(--color-blackOne);
+    height: 200px;
+    text-align: center;
+    justify-content: center;
+    border-bottom: solid #fff;
+    grid-area: contacto1;
+}
+
+.contacto1 ul li{
+    display: inline-block;
+    margin: 10px 5px;
+    width: 95px;
+    height: 60px;
+    padding: 30px;
+    text-align: center;
+}
+
+.contacto1 ul li a{
+    display: block;
+    padding: 8px;
+    background-color: #fff;
+    color: #4B4A4A;
+    font-size: 1.2rem;
+    border-radius: 10%;
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, .5);
+    transition: .2s;
+}
+
+
+
+.contacto1 ul li a:hover{
+    transform: translateY(6px) scale(1.1);
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, .7);
+    filter: none;
+    color: #fff;
+}
+
+.contacto1 ul li .facebook:hover{
+    background: var(--color-face);
+}
+.contacto1 ul li .instagram:hover{
+    background: var(--color-instagram);
+}
+
+.contenedor .title5{
+    background-color: var(--color-blackOne);
+    height: 160px;
+    margin-top: 0px;
+    grid-area: title5;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.title5{
+    text-shadow: 0.05em 0.05em 0.1em rgb(77, 76, 76);
+    font-size: 1.2rem;
+    font-family: 'Barlow Condensed', sans-serif;
+    color: var(--color-white);
+    background-color: gainsboro;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.contenedor .contacto2{
+    background-color: var(--color-blackOne);
+    height: 200px;
+    color: var(--color-white);
+    text-align: center;
+    justify-content: center;
+    border-bottom: solid #fff;
+    grid-area: contacto2;
+}
+
+.contacto2{
+    width: 100%;
+    height: 26vh;
+    color: var(--color-white);
+}
+
+
+.contacto2 ul{
+    margin-left: 10px;
+    margin-top: 5px;
+    list-style: none;
+}
+
+.contacto2 ul li{
+    padding: 5px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: bolder;
+}
+
+.contenedor .footer{
+    background-image: url(./img/fondo2.png);
+    height: 100px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    grid-area: footer;
+}
+
+footer{
+    color: var(--color-white);
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+footer p{
+    align-items: center;
+    justify-content: center;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.8rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-footer{
+    width: 30%;
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+.navbar-footer li{
+    list-style: none;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.8rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@media (min-width: 768px) and (max-width: 1004px) {
+    .contenedor{
+        grid-template-areas: "header header header"
+                         "banner banner banner"
+                         "title1 title1 title1"
+                         "producto1 producto2 producto3"
+                         "title2 title2 title2"
+                         "servicio1 servicio2 servicio2"
+                         "title3 title3 title3"
+                         "clientes1 clientes2 clientes3"
+                         "clientes4 clientes5 clientes6"
+                         "clientes7 clientes8 clientes9"
+                         "clientes10 clientes11 clientes12"
+                         "title4 title5 title5"
+                         "contacto1 contacto2 contacto2"
+                         "footer footer footer";
+    }
+
+    .header img{
+        width: 20%;
+        margin-top: 20px;
+    }
+
+    .navbar{
+        width: 70%;
+        padding: 30px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        float: right;
+    }
+
+    .serviceli{
+        margin-top: 35px;
+        text-align: left;
+        font-size: 1.2rem;
+        font-family: 'Barlow Condensed', sans-serif;
+    }
+
+    .contenedor .servicios1{
+        background-image: url(./img/fondo2.png);
+        height: 450px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        grid-area: servicio1;
+    }
+    
+    .servicios1 video{
+        width: 80%;
+        height: 70%;
+    }
+
+    
+}
+
+
+@media (min-width: 321px) and (max-width: 767px) {
+    .contenedor{
+        grid-template-areas: "header header header"
+                         "banner banner banner"
+                         "title1 title1 title1"
+                         "producto1 producto1 producto1"
+                         "producto2 producto2 producto2"
+                         "producto3 producto3 producto3"
+                         "title2 title2 title2"
+                         "servicio1 servicio1 servicio1"
+                         "servicio2 servicio2 servicio2"
+                         "title3 title3 title3"
+                         "clientes1 clientes2 clientes3"
+                         "clientes4 clientes5 clientes6"
+                         "clientes7 clientes8 clientes9"
+                         "clientes10 clientes11 clientes12"
+                         "title4 title4 title4"
+                         "contacto1 contacto1 contacto1"
+                         "title5 title5 title5"
+                         "contacto2 contacto2 contacto2"
+                         "footer footer footer";
+    }
+
+    .header{
+        height: 15vh;
+    }
+
+    .header img{
+        width: 30%;
+        margin-top: 25px;
+    }
+
+    .navbar{
+        display: none;
+    }
+
+    .title1{
+        text-shadow: 0.05em 0.05em 0.1em rgb(77, 76, 76);
+        font-size: 1.5rem;
+        font-family: 'Barlow Condensed', sans-serif;
+        color: var(--color-blackOne);
+        background-color: gainsboro;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+
+    .title2{
+        text-shadow: 0.05em 0.05em 0.1em rgb(77, 76, 76);
+        font-size: 1.5rem;
+        font-family: 'Barlow Condensed', sans-serif;
+        color: var(--color-blackOne);
+        background-color: gainsboro;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+
+    .title3{
+        text-shadow: 0.05em 0.05em 0.1em rgb(77, 76, 76);
+        font-size: 1.5rem;
+        font-family: 'Barlow Condensed', sans-serif;
+        color: var(--color-blackOne);
+        background-color: gainsboro;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+
+    .producto1 h2{
+        text-shadow: 0.05em 0.05em 0.1em rgb(77, 76, 76);
+        margin-top: 10px;
+        font-size: 1.3rem;
+    }
+
+    .producto2 h2{
+        text-shadow: 0.05em 0.05em 0.1em rgb(77, 76, 76);
+        margin-top: 10px;
+        font-size: 1.3rem;
+    }
+
+    .producto3 h2{
+        text-shadow: 0.05em 0.05em 0.1em rgb(77, 76, 76);
+        margin-top: 10px;
+        font-size: 1.3rem;
+    }
+
+    .serviceli{
+        margin-top: 35px;
+        text-align: left;
+        font-size: 1rem;
+        font-family: 'Barlow Condensed', sans-serif;
+    }
+
+    .title4{
+        text-shadow: 0.05em 0.05em 0.1em rgb(77, 76, 76);
+        font-size: 1.3rem;
+        font-family: 'Barlow Condensed', sans-serif;
+        color: var(--color-white);
+        background-color: gainsboro;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+
+    .title5{
+        text-shadow: 0.05em 0.05em 0.1em rgb(77, 76, 76);
+        font-size: 1.3rem;
+        font-family: 'Barlow Condensed', sans-serif;
+        color: var(--color-white);
+        background-color: gainsboro;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+
+    
+}
